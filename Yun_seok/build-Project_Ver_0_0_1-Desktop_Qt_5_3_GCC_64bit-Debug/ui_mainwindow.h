@@ -36,7 +36,7 @@ public:
     QPushButton *break_button;
     QProgressBar *progressBar;
     QPushButton *button_A;
-    QPushButton *pushButton_6;
+    QPushButton *button_B;
     QLineEdit *lineEdit;
     QGraphicsView *graphicsView;
     QMenuBar *menuBar;
@@ -129,9 +129,9 @@ public:
         button_A = new QPushButton(centralWidget);
         button_A->setObjectName(QStringLiteral("button_A"));
         button_A->setGeometry(QRect(460, 140, 99, 27));
-        pushButton_6 = new QPushButton(centralWidget);
-        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
-        pushButton_6->setGeometry(QRect(460, 180, 99, 27));
+        button_B = new QPushButton(centralWidget);
+        button_B->setObjectName(QStringLiteral("button_B"));
+        button_B->setGeometry(QRect(460, 180, 99, 27));
         lineEdit = new QLineEdit(centralWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setGeometry(QRect(230, 40, 113, 27));
@@ -169,7 +169,7 @@ public:
         Acc_button->setText(QString());
         break_button->setText(QString());
         button_A->setText(QApplication::translate("MainWindow", "A", 0));
-        pushButton_6->setText(QApplication::translate("MainWindow", "B", 0));
+        button_B->setText(QApplication::translate("MainWindow", "B", 0));
     } // retranslateUi
 
 };

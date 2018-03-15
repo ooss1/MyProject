@@ -10,7 +10,7 @@ QGraphicsScene * scene;
 
 QGraphicsPixmapItem * LED_1;
 static int speed=0;
-
+void change_image(QGraphicsPixmapItem * image);
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -32,14 +32,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_button_A_clicked()
-{
-    QPixmap LED("LED_RED.png");
-    LED_1 = scene->addPixmap(LED);
-    LED_1->setPos(3,3);
-}
-
 void MainWindow::on_Acc_button_clicked()
 {
     ui->lineEdit->setText("ACC Button");
@@ -52,4 +44,17 @@ void MainWindow::on_break_button_clicked()
     ui->lineEdit->setText("break Button");
     if(speed>0)speed-=20;
     ui->progressBar->setValue(speed);
+}
+
+void MainWindow::on_button_A_clicked()
+{
+    change_image(LED_1);
+}
+void change_image(QGraphicsPixmapItem * image){
+    static int count=0;
+    count++;
+    QPixmap LED_RED("LED_RED.png");
+    QPixmap LED_GREEN("LED_GREEN.png");
+    if(count%2==0) image->setPixmap(LED_GREEN);
+    else image->setPixmap(LED_RED);
 }

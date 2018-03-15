@@ -26,6 +26,10 @@ private slots:
 
     void on_break_button_clicked();
 
+    void on_pushButton_6_clicked();
+
+    void on_button_B_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
