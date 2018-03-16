@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>604</width>
-    <height>300</height>
+    <width>543</width>
+    <height>296</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,11 +38,11 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="right_button">
+   <widget class="QPushButton" name="Right_button">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>120</y>
+      <x>130</x>
+      <y>130</y>
       <width>61</width>
       <height>61</height>
      </rect>
@@ -52,10 +52,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../button/next (2).png</normaloff>../button/next (2).png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -88,8 +84,8 @@
    <widget class="QPushButton" name="Left_button">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>120</y>
+      <x>50</x>
+      <y>130</y>
       <width>61</width>
       <height>61</height>
      </rect>
@@ -99,10 +95,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../button/next (6).png</normaloff>../button/next (6).png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -135,8 +127,8 @@
    <widget class="QPushButton" name="Acc_button">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>80</y>
+      <x>90</x>
+      <y>90</y>
       <width>61</width>
       <height>61</height>
      </rect>
@@ -146,10 +138,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../button/next (3).png</normaloff>../button/next (3).png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -179,11 +167,11 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="break_button">
+   <widget class="QPushButton" name="Break_button">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>160</y>
+      <x>90</x>
+      <y>170</y>
       <width>61</width>
       <height>61</height>
      </rect>
@@ -193,10 +181,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../button/next (4).png</normaloff>../button/next (4).png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -229,21 +213,24 @@
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>10</y>
-      <width>551</width>
+      <width>331</width>
       <height>23</height>
      </rect>
     </property>
     <property name="value">
      <number>0</number>
     </property>
+    <property name="textVisible">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="button_A">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>140</y>
+      <x>320</x>
+      <y>150</y>
       <width>99</width>
       <height>27</height>
      </rect>
@@ -255,8 +242,8 @@
    <widget class="QPushButton" name="button_B">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>180</y>
+      <x>320</x>
+      <y>190</y>
       <width>99</width>
       <height>27</height>
      </rect>
@@ -268,8 +255,8 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>40</y>
+      <x>60</x>
+      <y>50</y>
       <width>113</width>
       <height>27</height>
      </rect>
@@ -278,8 +265,8 @@
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>80</y>
+      <x>290</x>
+      <y>90</y>
       <width>161</width>
       <height>41</height>
      </rect>
@@ -309,7 +296,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>604</width>
+     <width>543</width>
      <height>25</height>
     </rect>
    </property>
