@@ -2,16 +2,23 @@
 #include "ui_mainwindow.h"
 
 
+#include <stdlib.h>
+#include <stdio.h>
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
 #include <QGraphicsItem>
 #include <QPalette>
 #include <QProcess>
+#include <QDebug>
+
+#define PORT_NUMBER "7"
+
 QGraphicsScene * scene;
 
 QGraphicsPixmapItem * LED_1;
 static int speed=0;
+static char speed_M[5];
 void change_image(QGraphicsPixmapItem * image);
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -32,7 +39,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->Left_button->setIcon(LEFT_ARROW);
     ui->Right_button->setIcon(RIGHT_ARROW);
 
-
     scene = new QGraphicsScene();
     ui->graphicsView->setScene(scene);
     QPixmap LED("LED_GREEN.png");
@@ -49,15 +55,39 @@ MainWindow::~MainWindow()
 void MainWindow::on_Acc_button_clicked()
 {
     ui->lineEdit->setText("ACC Button");
-    if(speed<=100) speed+=20;
+    if(speed<100) speed+=20;
+    sprintf(speed_M,"%d",speed);
     ui->progressBar->setValue(speed);
+
+
+    QProcess Process;
+    QString program = "./TCP_Client";
+    QStringList arguments;
+
+    arguments<<"10.0.2.15"<<speed_M<<PORT_NUMBER;
+    Process.start(program,arguments);
+    Process.waitForFinished();
+    qDebug()<<Process.readAll();
+
+
 }
 
 void MainWindow::on_Break_button_clicked()
 {
     ui->lineEdit->setText("break Button");
     if(speed>0)speed-=20;
+    sprintf(speed_M,"%d",speed);
     ui->progressBar->setValue(speed);
+
+    QProcess Process_2;
+    QString program = "./TCP_Client";
+    QStringList arguments;
+
+    arguments<<"10.0.2.15"<<speed_M<<PORT_NUMBER;
+    Process_2.start(program,arguments);
+    Process_2.waitForFinished();
+    qDebug()<<Process_2.readAll();
+
 }
 
 void MainWindow::on_button_A_clicked()
@@ -65,14 +95,14 @@ void MainWindow::on_button_A_clicked()
     change_image(LED_1);
 
 
-    QProcess Process;
-    QString program = "TCP_Client";
+    QProcess Process_1;
+    QString program = "./TCP_Client";
     QStringList arguments;
 
-    arguments<<"192.168.0.90"<<"A button"<<"7";
-    //Process=new QProcess(this);
-
-    Process.start(program,arguments);
+    arguments<<"10.0.2.15"<<"A"<<PORT_NUMBER;
+    Process_1.start(program,arguments);
+    Process_1.waitForFinished();
+    qDebug()<<Process_1.readAll();
 
 }
 
