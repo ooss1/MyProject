@@ -58,9 +58,9 @@ void Buzzer_function(void *argumentPointer){
 		printf("buzzer on");
 		data = atoi(Rd_msg.data);
 		if(data ==1) {
-			for(i=0;i<=0xfff;i++) read(fd, BUZZER_ON, 0);
+			for(i=0;i<=0xfff;i++) ioctl(fd, BUZZER_ON, 0);
 		}
-		read(fd, BUZZER_OFF,0);
+		ioctl(fd, BUZZER_OFF,0);
 		pthread_mutex_unlock(&buz_mutex);
 	}
 	close(fd); 

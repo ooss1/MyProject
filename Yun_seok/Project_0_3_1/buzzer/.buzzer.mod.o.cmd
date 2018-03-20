@@ -1,8 +1,8 @@
-cmd_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := /project/toolchain/arm-2010q1/bin/arm-none-linux-gnueabi-gcc -Wp,-MD,/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/.buzzer.mod.o.d  -nostdinc -isystem /project/toolchain/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include -I/work/kernel-mds2450-3.0.22/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-s3c2410/include -Iarch/arm/mach-s3c2400/include -Iarch/arm/mach-s3c2412/include -Iarch/arm/mach-s3c2416/include -Iarch/arm/mach-s3c2440/include -Iarch/arm/mach-s3c2443/include -Iarch/arm/plat-s3c24xx/include -Iarch/arm/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -marm -fno-dwarf2-cfi-asm -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables -D__LINUX_ARM_ARCH__=5 -march=armv5te -mtune=arm9tdmi -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(buzzer.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(buzzer)" -DMODULE  -c -o /home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o /home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.c
+cmd_/home/student/work/Project_0_3_0/buzzer/buzzer.mod.o := /project/toolchain/arm-2010q1/bin/arm-none-linux-gnueabi-gcc -Wp,-MD,/home/student/work/Project_0_3_0/buzzer/.buzzer.mod.o.d  -nostdinc -isystem /project/toolchain/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include -I/work/kernel-mds2450-3.0.22/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-s3c2410/include -Iarch/arm/mach-s3c2400/include -Iarch/arm/mach-s3c2412/include -Iarch/arm/mach-s3c2416/include -Iarch/arm/mach-s3c2440/include -Iarch/arm/mach-s3c2443/include -Iarch/arm/plat-s3c24xx/include -Iarch/arm/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -marm -fno-dwarf2-cfi-asm -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables -D__LINUX_ARM_ARCH__=5 -march=armv5te -mtune=arm9tdmi -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(buzzer.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(buzzer)" -DMODULE  -c -o /home/student/work/Project_0_3_0/buzzer/buzzer.mod.o /home/student/work/Project_0_3_0/buzzer/buzzer.mod.c
 
-source_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := /home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.c
+source_/home/student/work/Project_0_3_0/buzzer/buzzer.mod.o := /home/student/work/Project_0_3_0/buzzer/buzzer.mod.c
 
-deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := \
+deps_/home/student/work/Project_0_3_0/buzzer/buzzer.mod.o := \
     $(wildcard include/config/module/unload.h) \
   include/linux/module.h \
     $(wildcard include/config/symbol/prefix.h) \
@@ -323,6 +323,6 @@ deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := \
   include/linux/vermagic.h \
   include/generated/utsrelease.h \
 
-/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o: $(deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o)
+/home/student/work/Project_0_3_0/buzzer/buzzer.mod.o: $(deps_/home/student/work/Project_0_3_0/buzzer/buzzer.mod.o)
 
-$(deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o):
+$(deps_/home/student/work/Project_0_3_0/buzzer/buzzer.mod.o):

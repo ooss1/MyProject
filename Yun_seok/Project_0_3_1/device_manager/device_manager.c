@@ -9,7 +9,7 @@
 #include<sys/msg.h>
 
 #include "mq.h"
-#include "buzzer.h"
+
 
 #define NUM_THREADS 4 /* MAKE THREAD NUMBER */
 
@@ -39,7 +39,7 @@ void MSG_Queue_Read(void *argumentPointer)
 			perror("msgrcv");
 			exit(-1);
 		}
-		printf("%s :  %s\n",Rd_msg.device_name,Rd_msg.data);
+		printf("%s :  %s\n",Rd_msg.device_name,Rd_msg.buz_data);
 		if((strcmp(Rd_msg.device_name,"Buzzer"))==0)
 			pthread_cond_signal(&buz_cond);
 	}
@@ -48,7 +48,6 @@ void MSG_Queue_Read(void *argumentPointer)
 void Buzzer_function(void *argumentPointer){
 	int fd;
 	int len = 0;
-	int i;
 	int data;
 	fd = open("/dev/buz", O_RDWR);
 	while(1){
@@ -56,11 +55,8 @@ void Buzzer_function(void *argumentPointer){
 		pthread_cond_wait(&buz_cond,&buz_mutex);
 		if (fd<0) perror("open error");
 		printf("buzzer on");
-		data = atoi(Rd_msg.data);
-		if(data ==1) {
-			for(i=0;i<=0xfff;i++) read(fd, BUZZER_ON, 0);
-		}
-		read(fd, BUZZER_OFF,0);
+		data = atoi(Rd_msg.buz_data);
+		read(fd, data,0);
 		pthread_mutex_unlock(&buz_mutex);
 	}
 	close(fd); 

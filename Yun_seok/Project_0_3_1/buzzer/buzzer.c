@@ -9,7 +9,6 @@
 #include <linux/device.h>
 #include <linux/fs.h>
 #include <linux/cdev.h>
-#include <linux/pwm.h>
 #include <asm/uaccess.h>
 #include <asm/io.h>
 #include <asm/irq.h>
@@ -17,7 +16,7 @@
 #include <mach/regs-gpio.h>
 #include <plat/gpio-cfg.h>
 
-#include "buzzer.h"
+//#include "buzzer.h"
 #define DRV_NAME		"buzzer"
 
 static int buz_open(struct inode *inode, struct file *filp);
@@ -27,32 +26,12 @@ static int buz_Buzonoff(struct file *filp, unsigned int cmd, unsigned long arg);
 static int __init buz_init(void);
 static void __exit buz_exit(void);
 
-struct pwm_device {
-	struct list_head     list;
-	struct platform_device  *pdev;
-
-	struct clk      *clk_div;
-	struct clk      *clk;
-	const char      *label;
-
-	unsigned int         period_ns;
-	unsigned int         duty_ns;
-
-	unsigned char        tcon_base;
-	unsigned char        running;
-	unsigned char        use_count;
-	unsigned char        pwm_id;
-};
-
-static struct pwm_device *bz_pwm;
-
-struct pwm_duty_t pwm_duty;
 
 struct file_operations buz_fops = { 
 	.owner	= THIS_MODULE,
 	.open      	= buz_open,
 	.release   	= buz_release,
-	.unlocked_ioctl		= buz_Buzonoff,
+	.read	= buz_Buzonoff,
 };
 
 static int buz_major = 0, buz_minor = 0;
@@ -62,23 +41,14 @@ struct cdev buz_cdev;
 
 static int buz_open(struct inode *inode, struct file *filp)
 {	printk("buz_open...\n");
-	s3c_gpio_cfgpin(S3C2410_GPB(1), S3C_GPIO_SFN(2));	// set GPB[1] : 1 OUTPUT - Buzzer
-	bz_pwm = pwm_request(1, "bz_pwm");	
-	if( NULL == bz_pwm )
-	{
-		printk("bz_pwm Fail!!\n");
-		return -1;
-	}
-	pwm_duty.pulse_width = 150000;
-	pwm_duty.period = 200000;
-	pwm_config(bz_pwm, pwm_duty.pulse_width, pwm_duty.period);
+	s3c_gpio_cfgpin(S3C2410_GPB(1), S3C_GPIO_SFN(1));	// set GPB[1] OUTPUT - Buzzer
+
 	return 0;
 }
 
 static int buz_release(struct inode *inode, struct file *filp)
 {
 	printk("Device has been closed...\n");
-	pwm_free( bz_pwm );
 	return 0;
 }
 
@@ -111,11 +81,19 @@ static int buz_register_cdev(void)
 }
 static int buz_Buzonoff(struct file *filp, unsigned int cmd, unsigned long arg)
 {	
-	static int i;
+	volatile static int i;
 
 	switch(cmd) {
-		case BUZZER_OFF : {pwm_disable(bz_pwm); break;}		// 0: OFF
-		case BUZZER_ON : {pwm_enable(bz_pwm); break;}		// 1: ON					
+		case 0: {gpio_set_value(S3C2410_GPB(1), 0);break;}		// 0: OFF
+		case 1: {										        // 1: ON
+					for(i=0;i<0xfff;i++){
+						gpio_set_value(S3C2410_GPB(1), 1);				
+						udelay(100);
+						gpio_set_value(S3C2410_GPB(1), 0);	
+						udelay(100);
+					}
+					break;
+				}
 	}
 }
 
@@ -135,7 +113,6 @@ static void __exit buz_exit(void)
 	unregister_chrdev_region(buz_dev, 1);
 
 }
-
 
 module_init(buz_init);
 module_exit(buz_exit);

@@ -1,38 +1,24 @@
-cmd_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := /project/toolchain/arm-2010q1/bin/arm-none-linux-gnueabi-gcc -Wp,-MD,/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/.buzzer.mod.o.d  -nostdinc -isystem /project/toolchain/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include -I/work/kernel-mds2450-3.0.22/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-s3c2410/include -Iarch/arm/mach-s3c2400/include -Iarch/arm/mach-s3c2412/include -Iarch/arm/mach-s3c2416/include -Iarch/arm/mach-s3c2440/include -Iarch/arm/mach-s3c2443/include -Iarch/arm/plat-s3c24xx/include -Iarch/arm/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -marm -fno-dwarf2-cfi-asm -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables -D__LINUX_ARM_ARCH__=5 -march=armv5te -mtune=arm9tdmi -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(buzzer.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(buzzer)" -DMODULE  -c -o /home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o /home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.c
+cmd_/home/student/work/Project_0_3_0/buzzer/buzzer.o := /project/toolchain/arm-2010q1/bin/arm-none-linux-gnueabi-gcc -Wp,-MD,/home/student/work/Project_0_3_0/buzzer/.buzzer.o.d  -nostdinc -isystem /project/toolchain/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include -I/work/kernel-mds2450-3.0.22/arch/arm/include -Iarch/arm/include/generated -Iinclude  -include include/generated/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-s3c2410/include -Iarch/arm/mach-s3c2400/include -Iarch/arm/mach-s3c2412/include -Iarch/arm/mach-s3c2416/include -Iarch/arm/mach-s3c2440/include -Iarch/arm/mach-s3c2443/include -Iarch/arm/plat-s3c24xx/include -Iarch/arm/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -marm -fno-dwarf2-cfi-asm -mabi=aapcs-linux -mno-thumb-interwork -funwind-tables -D__LINUX_ARM_ARCH__=5 -march=armv5te -mtune=arm9tdmi -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fomit-frame-pointer -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(buzzer)"  -D"KBUILD_MODNAME=KBUILD_STR(buzzer)" -c -o /home/student/work/Project_0_3_0/buzzer/buzzer.o /home/student/work/Project_0_3_0/buzzer/buzzer.c
 
-source_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := /home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.c
+source_/home/student/work/Project_0_3_0/buzzer/buzzer.o := /home/student/work/Project_0_3_0/buzzer/buzzer.c
 
-deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := \
-    $(wildcard include/config/module/unload.h) \
-  include/linux/module.h \
-    $(wildcard include/config/symbol/prefix.h) \
-    $(wildcard include/config/sysfs.h) \
-    $(wildcard include/config/modules.h) \
-    $(wildcard include/config/modversions.h) \
-    $(wildcard include/config/unused/symbols.h) \
-    $(wildcard include/config/generic/bug.h) \
-    $(wildcard include/config/kallsyms.h) \
-    $(wildcard include/config/smp.h) \
-    $(wildcard include/config/tracepoints.h) \
-    $(wildcard include/config/tracing.h) \
-    $(wildcard include/config/event/tracing.h) \
-    $(wildcard include/config/ftrace/mcount/record.h) \
-    $(wildcard include/config/constructors.h) \
-    $(wildcard include/config/debug/set/module/ronx.h) \
-  include/linux/list.h \
-    $(wildcard include/config/debug/list.h) \
-  include/linux/types.h \
-    $(wildcard include/config/uid16.h) \
+deps_/home/student/work/Project_0_3_0/buzzer/buzzer.o := \
+  include/linux/errno.h \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/errno.h \
+  include/asm-generic/errno.h \
+  include/asm-generic/errno-base.h \
+  include/linux/kernel.h \
     $(wildcard include/config/lbdaf.h) \
-    $(wildcard include/config/arch/dma/addr/t/64bit.h) \
-    $(wildcard include/config/phys/addr/t/64bit.h) \
-    $(wildcard include/config/64bit.h) \
-  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/types.h \
-  include/asm-generic/int-ll64.h \
-  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/bitsperlong.h \
-  include/asm-generic/bitsperlong.h \
-  include/linux/posix_types.h \
-  include/linux/stddef.h \
+    $(wildcard include/config/preempt/voluntary.h) \
+    $(wildcard include/config/debug/spinlock/sleep.h) \
+    $(wildcard include/config/prove/locking.h) \
+    $(wildcard include/config/ring/buffer.h) \
+    $(wildcard include/config/tracing.h) \
+    $(wildcard include/config/numa.h) \
+    $(wildcard include/config/compaction.h) \
+    $(wildcard include/config/ftrace/mcount/record.h) \
+  /project/toolchain/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include/stdarg.h \
+  include/linux/linkage.h \
   include/linux/compiler.h \
     $(wildcard include/config/sparse/rcu/pointer.h) \
     $(wildcard include/config/trace/branch/profiling.h) \
@@ -43,28 +29,22 @@ deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := \
     $(wildcard include/config/arch/supports/optimized/inlining.h) \
     $(wildcard include/config/optimize/inlining.h) \
   include/linux/compiler-gcc4.h \
-  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/posix_types.h \
-  include/linux/poison.h \
-    $(wildcard include/config/illegal/pointer/value.h) \
-  include/linux/const.h \
-  include/linux/stat.h \
-  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/stat.h \
-  include/linux/time.h \
-    $(wildcard include/config/arch/uses/gettimeoffset.h) \
-  include/linux/cache.h \
-    $(wildcard include/config/arch/has/cache/line/size.h) \
-  include/linux/kernel.h \
-    $(wildcard include/config/preempt/voluntary.h) \
-    $(wildcard include/config/debug/spinlock/sleep.h) \
-    $(wildcard include/config/prove/locking.h) \
-    $(wildcard include/config/ring/buffer.h) \
-    $(wildcard include/config/numa.h) \
-    $(wildcard include/config/compaction.h) \
-  /project/toolchain/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include/stdarg.h \
-  include/linux/linkage.h \
   /work/kernel-mds2450-3.0.22/arch/arm/include/asm/linkage.h \
+  include/linux/stddef.h \
+  include/linux/types.h \
+    $(wildcard include/config/uid16.h) \
+    $(wildcard include/config/arch/dma/addr/t/64bit.h) \
+    $(wildcard include/config/phys/addr/t/64bit.h) \
+    $(wildcard include/config/64bit.h) \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/types.h \
+  include/asm-generic/int-ll64.h \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/bitsperlong.h \
+  include/asm-generic/bitsperlong.h \
+  include/linux/posix_types.h \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/posix_types.h \
   include/linux/bitops.h \
   /work/kernel-mds2450-3.0.22/arch/arm/include/asm/bitops.h \
+    $(wildcard include/config/smp.h) \
   /work/kernel-mds2450-3.0.22/arch/arm/include/asm/system.h \
     $(wildcard include/config/function/graph/tracer.h) \
     $(wildcard include/config/cpu/32v6k.h) \
@@ -99,6 +79,7 @@ deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := \
     $(wildcard include/config/have/tcm.h) \
     $(wildcard include/config/arm/patch/phys/virt.h) \
     $(wildcard include/config/arm/patch/phys/virt/16bit.h) \
+  include/linux/const.h \
   arch/arm/mach-s3c2410/include/mach/memory.h \
   /work/kernel-mds2450-3.0.22/arch/arm/include/asm/sizes.h \
   include/asm-generic/sizes.h \
@@ -129,14 +110,37 @@ deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := \
     $(wildcard include/config/printk.h) \
     $(wildcard include/config/dynamic/debug.h) \
   include/linux/init.h \
+    $(wildcard include/config/modules.h) \
     $(wildcard include/config/hotplug.h) \
   include/linux/dynamic_debug.h \
   /work/kernel-mds2450-3.0.22/arch/arm/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \
+    $(wildcard include/config/generic/bug.h) \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
   /work/kernel-mds2450-3.0.22/arch/arm/include/asm/div64.h \
+  include/linux/module.h \
+    $(wildcard include/config/symbol/prefix.h) \
+    $(wildcard include/config/sysfs.h) \
+    $(wildcard include/config/modversions.h) \
+    $(wildcard include/config/unused/symbols.h) \
+    $(wildcard include/config/kallsyms.h) \
+    $(wildcard include/config/tracepoints.h) \
+    $(wildcard include/config/event/tracing.h) \
+    $(wildcard include/config/module/unload.h) \
+    $(wildcard include/config/constructors.h) \
+    $(wildcard include/config/debug/set/module/ronx.h) \
+  include/linux/list.h \
+    $(wildcard include/config/debug/list.h) \
+  include/linux/poison.h \
+    $(wildcard include/config/illegal/pointer/value.h) \
+  include/linux/stat.h \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/stat.h \
+  include/linux/time.h \
+    $(wildcard include/config/arch/uses/gettimeoffset.h) \
+  include/linux/cache.h \
+    $(wildcard include/config/arch/has/cache/line/size.h) \
   /work/kernel-mds2450-3.0.22/arch/arm/include/asm/cache.h \
     $(wildcard include/config/arm/l1/cache/shift.h) \
     $(wildcard include/config/aeabi.h) \
@@ -232,10 +236,6 @@ deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := \
     $(wildcard include/config/memory/hotremove.h) \
     $(wildcard include/config/have/arch/nodedata/extension.h) \
   include/linux/notifier.h \
-  include/linux/errno.h \
-  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/errno.h \
-  include/asm-generic/errno.h \
-  include/asm-generic/errno-base.h \
   include/linux/mutex.h \
     $(wildcard include/config/debug/mutexes.h) \
     $(wildcard include/config/have/arch/mutex/cpu/relax.h) \
@@ -320,9 +320,137 @@ deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o := \
     $(wildcard include/config/arm/unwind.h) \
   include/trace/events/module.h \
   include/trace/define_trace.h \
-  include/linux/vermagic.h \
-  include/generated/utsrelease.h \
+  include/linux/slab.h \
+    $(wildcard include/config/slab/debug.h) \
+    $(wildcard include/config/failslab.h) \
+    $(wildcard include/config/slub.h) \
+    $(wildcard include/config/slob.h) \
+    $(wildcard include/config/debug/slab.h) \
+    $(wildcard include/config/slab.h) \
+  include/linux/slub_def.h \
+    $(wildcard include/config/slub/stats.h) \
+    $(wildcard include/config/slub/debug.h) \
+  include/linux/kmemleak.h \
+    $(wildcard include/config/debug/kmemleak.h) \
+  include/linux/major.h \
+  include/linux/delay.h \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/delay.h \
+  include/linux/interrupt.h \
+    $(wildcard include/config/generic/hardirqs.h) \
+    $(wildcard include/config/pm/sleep.h) \
+    $(wildcard include/config/irq/forced/threading.h) \
+    $(wildcard include/config/generic/irq/probe.h) \
+    $(wildcard include/config/proc/fs.h) \
+  include/linux/irqreturn.h \
+  include/linux/irqnr.h \
+  include/linux/hardirq.h \
+    $(wildcard include/config/virt/cpu/accounting.h) \
+    $(wildcard include/config/irq/time/accounting.h) \
+  include/linux/ftrace_irq.h \
+    $(wildcard include/config/ftrace/nmi/enter.h) \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/hardirq.h \
+    $(wildcard include/config/local/timers.h) \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/irq.h \
+  arch/arm/mach-s3c2410/include/mach/irqs.h \
+    $(wildcard include/config/cpu/s3c2416.h) \
+    $(wildcard include/config/cpu/s3c2443.h) \
+    $(wildcard include/config/cpu/s3c2440.h) \
+  include/linux/irq_cpustat.h \
+  include/linux/hrtimer.h \
+    $(wildcard include/config/high/res/timers.h) \
+    $(wildcard include/config/timerfd.h) \
+  include/linux/rbtree.h \
+  include/linux/timerqueue.h \
+  include/trace/events/irq.h \
+  include/linux/device.h \
+    $(wildcard include/config/debug/devres.h) \
+    $(wildcard include/config/devtmpfs.h) \
+    $(wildcard include/config/sysfs/deprecated.h) \
+  include/linux/ioport.h \
+  include/linux/klist.h \
+  include/linux/pm.h \
+    $(wildcard include/config/pm.h) \
+    $(wildcard include/config/pm/runtime.h) \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/device.h \
+    $(wildcard include/config/dmabounce.h) \
+  include/linux/pm_wakeup.h \
+  include/linux/fs.h \
+    $(wildcard include/config/security.h) \
+    $(wildcard include/config/quota.h) \
+    $(wildcard include/config/fsnotify.h) \
+    $(wildcard include/config/ima.h) \
+    $(wildcard include/config/fs/posix/acl.h) \
+    $(wildcard include/config/epoll.h) \
+    $(wildcard include/config/debug/writecount.h) \
+    $(wildcard include/config/file/locking.h) \
+    $(wildcard include/config/auditsyscall.h) \
+    $(wildcard include/config/block.h) \
+    $(wildcard include/config/fs/xip.h) \
+    $(wildcard include/config/migration.h) \
+  include/linux/limits.h \
+  include/linux/ioctl.h \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/ioctl.h \
+  include/asm-generic/ioctl.h \
+  include/linux/blk_types.h \
+    $(wildcard include/config/blk/dev/integrity.h) \
+  include/linux/kdev_t.h \
+  include/linux/dcache.h \
+  include/linux/rculist.h \
+  include/linux/rculist_bl.h \
+  include/linux/list_bl.h \
+  include/linux/bit_spinlock.h \
+  include/linux/path.h \
+  include/linux/radix-tree.h \
+  include/linux/prio_tree.h \
+  include/linux/pid.h \
+  include/linux/capability.h \
+  include/linux/semaphore.h \
+  include/linux/fiemap.h \
+  include/linux/quota.h \
+    $(wildcard include/config/quota/netlink/interface.h) \
+  include/linux/percpu_counter.h \
+  include/linux/dqblk_xfs.h \
+  include/linux/dqblk_v1.h \
+  include/linux/dqblk_v2.h \
+  include/linux/dqblk_qtree.h \
+  include/linux/nfs_fs_i.h \
+  include/linux/nfs.h \
+  include/linux/sunrpc/msg_prot.h \
+  include/linux/inet.h \
+  include/linux/fcntl.h \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/fcntl.h \
+  include/asm-generic/fcntl.h \
+  include/linux/err.h \
+  include/linux/cdev.h \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/uaccess.h \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/unified.h \
+    $(wildcard include/config/arm/asm/unified.h) \
+  /work/kernel-mds2450-3.0.22/arch/arm/include/asm/io.h \
+  arch/arm/mach-s3c2410/include/mach/io.h \
+  arch/arm/mach-s3c2410/include/mach/hardware.h \
+    $(wildcard include/config/cpu/s3c2412.h) \
+    $(wildcard include/config/no/multiword/io.h) \
+  arch/arm/mach-s3c2410/include/mach/map.h \
+  arch/arm/plat-samsung/include/plat/map-base.h \
+  arch/arm/plat-s3c24xx/include/plat/map.h \
+    $(wildcard include/config/cpu/s3c2413.h) \
+    $(wildcard include/config/cpu/s3c2412/only.h) \
+  arch/arm/mach-s3c2410/include/mach/gpio.h \
+    $(wildcard include/config/cpu/s3c244x.h) \
+    $(wildcard include/config/s3c24xx/gpio/extra.h) \
+  include/asm-generic/gpio.h \
+    $(wildcard include/config/gpiolib.h) \
+    $(wildcard include/config/of/gpio.h) \
+    $(wildcard include/config/of.h) \
+    $(wildcard include/config/gpio/sysfs.h) \
+  arch/arm/mach-s3c2410/include/mach/gpio-nrs.h \
+    $(wildcard include/config/s3c/gpio/space.h) \
+  arch/arm/mach-s3c2410/include/mach/gpio-fns.h \
+    $(wildcard include/config/cpu/s3c2400.h) \
+  arch/arm/plat-samsung/include/plat/gpio-cfg.h \
+    $(wildcard include/config/s5p/gpio/int.h) \
+  arch/arm/mach-s3c2410/include/mach/regs-gpio.h \
 
-/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o: $(deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o)
+/home/student/work/Project_0_3_0/buzzer/buzzer.o: $(deps_/home/student/work/Project_0_3_0/buzzer/buzzer.o)
 
-$(deps_/home/student/MyProject/Yun_seok/Project_Ver_0_3_0/buzzer/buzzer.mod.o):
+$(deps_/home/student/work/Project_0_3_0/buzzer/buzzer.o):
