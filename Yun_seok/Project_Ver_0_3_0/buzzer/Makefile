@@ -1,0 +1,17 @@
+obj-m := buzzer.o
+
+ KDIR	:=/work/kernel-mds2450-3.0.22
+
+all:
+	make -C $(KDIR) SUBDIRS=$(PWD) modules
+
+app:
+	arm-none-linux-gnueabi-gcc -o buzapp buzapp.c
+
+clean:
+	make -C $(KDIR) SUBDIRS=$(PWD) clean
+	rm -rf buzapp
+
+install:
+	cp *.ko 	/home/rootfs
+	cp buzapp	/home/rootfs
