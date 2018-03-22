@@ -23,8 +23,8 @@ LDFLAGS +=
 
 TARGET = ts-pc
 
-OBJS = AcceptTCPConnection.o DieWithError.o HandleTCPClient.o TCPEchoServer_C.o  parson.o #목적파일 이름
-SRCS = AcceptTCPConnection.c DieWithError.c HandleTCPClient.c TCPEchoServer_C.c parson.c  #소스파일 이름
+OBJS = AcceptTCPConnection.o DieWithError.o HandleTCPClient.o TCPEchoServer.o  parson.o #목적파일 이름
+SRCS = AcceptTCPConnection.c DieWithError.c HandleTCPClient.c TCPEchoServer.c parson.c  #소스파일 이름
 
 
 $(TARGET) : $(OBJS) 
