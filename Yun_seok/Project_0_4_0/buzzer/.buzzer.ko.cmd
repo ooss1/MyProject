@@ -1,0 +1,1 @@
+cmd_/home/student/work/Project_0_3_0/buzzer/buzzer.ko := /project/toolchain/arm-2010q1/bin/arm-none-linux-gnueabi-ld -EL -r  -T /work/kernel-mds2450-3.0.22/scripts/module-common.lds --build-id  -o /home/student/work/Project_0_3_0/buzzer/buzzer.ko /home/student/work/Project_0_3_0/buzzer/buzzer.o /home/student/work/Project_0_3_0/buzzer/buzzer.mod.o
