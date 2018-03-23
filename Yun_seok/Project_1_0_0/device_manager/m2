@@ -1,0 +1,39 @@
+
+# ARM Compile Option 
+    
+INCLUDEDIRS +=
+
+#header 파일이 어디있는지
+    
+CC = gcc
+#컴파일러의 위치
+    
+CFLAGS   += $(INCLUDEDIRS)
+CFLAGS   += -Wall -O2 -pthread
+
+LDFLAGS += 
+#라이브러리의 위치
+
+#
+# Compilation target for C files
+#
+%.o:%.c
+	@echo "Compiling $< ..."
+	$(CC) -c $(CFLAGS) -o $@ $<
+
+
+TARGET = device_manager
+
+OBJS =device_manager.o #목적파일 이름
+SRCS =device_manager.c #소스파일 이름
+
+
+$(TARGET) : $(OBJS) 
+	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS)  -o $@ 
+
+dep :
+	mkdep $(INCLUDEDIRS) $(SRCS)
+
+clean :	
+	rm -rf $(OBJS) $(TARGET) core
+

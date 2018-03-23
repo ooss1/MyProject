@@ -1,0 +1,1 @@
+cmd_/home/student/work/Project_0_4_0/Submotor/submot.ko := /project/toolchain/arm-2010q1/bin/arm-none-linux-gnueabi-ld -EL -r  -T /work/kernel-mds2450-3.0.22/scripts/module-common.lds --build-id  -o /home/student/work/Project_0_4_0/Submotor/submot.ko /home/student/work/Project_0_4_0/Submotor/submot.o /home/student/work/Project_0_4_0/Submotor/submot.mod.o

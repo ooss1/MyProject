@@ -1,0 +1,17 @@
+obj-m := dcmot.o
+
+ KDIR	:= /work/kernel-mds2450-3.0.22
+
+all:
+	make -C $(KDIR) SUBDIRS=$(PWD) modules
+
+app:
+	/opt/arm-2010q1/bin/arm-none-linux-gnueabi-gcc -o app app.c
+
+clean:
+	make -C $(KDIR) SUBDIRS=$(PWD) clean
+	rm -rf app
+
+install:
+	cp dcmot.ko 	/home/rootfs
+	cp app	/home/rootfs

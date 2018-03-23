@@ -1,0 +1,1 @@
+cmd_/home/student/work/Project_0_4_0/dcmotor/dcmot.ko := /project/toolchain/arm-2010q1/bin/arm-none-linux-gnueabi-ld -EL -r  -T /work/kernel-mds2450-3.0.22/scripts/module-common.lds --build-id  -o /home/student/work/Project_0_4_0/dcmotor/dcmot.ko /home/student/work/Project_0_4_0/dcmotor/dcmot.o /home/student/work/Project_0_4_0/dcmotor/dcmot.mod.o
